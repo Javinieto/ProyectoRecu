@@ -1,0 +1,10 @@
+<figure class="figure">
+    <img src="{{ song.cover }}" class="figure-img img-fluid rounded" style="width: 150px; height: 150px" />
+    <figcaption class="figure-caption">
+        <h5>
+            <a [routerLink]="['/songs', song.id]">{{ song.name }}</a>
+            <span>{{ song.duration }}</span>
+        </h5>
+        <p>{{ song.singer }}</p>
+    </figcaption>
+</figure>

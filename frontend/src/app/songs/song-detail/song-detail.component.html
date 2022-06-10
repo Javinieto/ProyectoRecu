@@ -1,0 +1,21 @@
+<ion-content>
+    <figure class="figure">
+        <img src="{{ song[0].cover }}" class="figure-img img-fluid rounded" style="width: 600px; height: 300px" />
+        <figcaption class="figure-caption">
+            <h4>Name: {{ song[0].name }}</h4>
+            <h5>Type: {{ song[0].type }}</h5>
+            <h5>Duration: {{ song[0].duration }}</h5>
+            <h5>Singer: {{ song[0].singer }}</h5>
+        </figcaption>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <button class="btn btn-outline-secondary mr-3" style="width: 80px" (click)="onBack()">
+          <i class="fa fa-chevron-left"></i> Back
+        </button>
+                <button class="btn btn-outline-primary" style="width: 80px" (click)="goEdit()">
+          Edit
+        </button>
+            </div>
+        </div>
+    </figure>
+</ion-content>

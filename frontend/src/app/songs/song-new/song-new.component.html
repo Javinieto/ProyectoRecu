@@ -1,0 +1,67 @@
+<div class="card">
+    <div class="card-header">
+        {{ pageTitle }}
+    </div>
+
+    <div class="card-body">
+        <form novalidate (ngSubmit)="saveSong()" [formGroup]="songForm">
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="songNameId">Song Name</label
+        >
+        <div class="col-md-8">
+          <input
+            class="form-control"
+            id="songNameId"
+            type="text"
+            placeholder="Name (required)"
+            formControlName="name"
+            name="name"
+          />
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="typeId">Type</label>
+
+                <div class="col-md-8">
+                    <input class="form-control" id="typeId" type="text" placeholder="Rock" formControlName="type" name="type" />
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="duration">Duration</label>
+
+                <div class="col-md-8">
+                    <textarea class="form-control" id="durationId" placeholder="3.30" rows="3" formControlName="duration" name="duration"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="singerId">Singer</label>
+
+                <div class="col-md-8">
+                    <textarea class="form-control" id="singerId" placeholder="Singer" rows="3" formControlName="singer" name="singer"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="coverId">Cover</label>
+
+                <div class="col-md-8">
+                    <input class="form-control" id="coverId" placeholder="Cover" formControlName="cover" name="cover" />
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <div class="offset-md-2 col-md-4">
+                    <button class="btn btn-primary mr-3" type="submit">Save</button>
+                    <button class="btn btn-outline-secondary mr-3" type="button" title="Cancel your edits" [routerLink]="['']">
+            Cancel
+          </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="alert alert-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
+</div>

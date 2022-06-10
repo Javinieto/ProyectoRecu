@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "proyectosongs"
+  },
+  "targets": {
+    "proyectosongs": {
+      "hosting": {
+        "app": [
+          "proyectosongs"
+        ]
+      }
+    }
+  }
+}
